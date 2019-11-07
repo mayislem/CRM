@@ -38,11 +38,14 @@ namespace Solution.Service
         public List<Offer> Getofferbyname(string name)
         {
 
-           
+            var students = from s in db.Offers
+                           select s;
+            if (!String.IsNullOrEmpty(name))
+            {
 
                 students = students.Where(s => s.OfferName.Contains(name));
 
-           
+            }
 
 
             return students.ToList();
