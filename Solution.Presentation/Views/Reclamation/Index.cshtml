@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Solution.Presentation.Models.ReclamationVm>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+</p>
+
+
+@using (Html.BeginForm("Index", "Reclamation/Index", FormMethod.Get, new { @class = "search" }))
+{
+
+    <p>
+        Find by Etat: @Html.TextBox("SearchString")
+        Date @Html.TextBox("Date")
+        <input type="submit" value="Search" />
+
+
+    </p>
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.objet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contenu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.titre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.objet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contenu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.etat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Idrec }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Idrec }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Idrec })
+        </td>
+    </tr>
+}
+
+</table>

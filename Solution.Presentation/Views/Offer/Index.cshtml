@@ -1,0 +1,44 @@
+﻿@model PagedList.IPagedList<Solution.Presentation.Models.OfferVm>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MyLayoutShop.cshtml";
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index_shop", "Offer/Index_shop", FormMethod.Get, new { @class = "search" }))
+{
+
+    <p>
+        Find by Description: @Html.TextBox("SearchString")
+        Date @Html.TextBox("Date")
+        <input type="submit" value="Search" />
+
+
+    </p>
+}
+
+<div class="row">
+
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            @Html.Partial("_OfferDetails", item);
+        }
+    }
+</div>
+
+
+<div id="container" style="margin-left: 20px">
+
+    <div class="pagination" style="margin-left: 400px">
+
+        @Html.PagedListPager(Model, i => Url.Action("Index_shop", "Offer", new { i, search = Request.QueryString["SearchString"] }))
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+
+
+    </div>
+</div>    

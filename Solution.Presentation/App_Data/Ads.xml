@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Advertisements>  
+  <Ad>  
+    <ImageUrl>  
+      URL of image to display for Advertisement #1  
+    </ImageUrl>  
+    <NavigateUrl>  
+      URL of page to link to for Advertisement #1  
+    </NavigateUrl>  
+    <AlternateText>  
+      Text to show as a ToolTip for Advertisement #1  
+    </AlternateText>  
+    <Keyword>  
+      Keyword used to filter for Advertisement #1  
+    </Keyword>  
+    <Impressions>  
+       Relative importance of Advertisement #1  
+    </Impressions>  
+    <CustomInformation>  
+      Custom Data about Advertisement #1  
+    </CustomInformation>  
+  </Ad>  
+</Advertisements> 

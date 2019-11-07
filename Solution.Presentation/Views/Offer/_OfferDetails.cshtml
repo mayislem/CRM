@@ -1,0 +1,18 @@
+﻿@model Solution.Presentation.Models.OfferVm
+@{string path = "~/Content/Uploads/" + @Model.ImgUrl;}
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card h-250">
+        <div class="product-img">
+            
+
+
+            </div>
+            <div class="card-footer">
+                @Html.ActionLink("Edit", "Edit", new { id = @Model.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = @Model.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = @Model.Id })
+                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+            </div>
+        </div>
+</div>
