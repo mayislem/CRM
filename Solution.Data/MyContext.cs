@@ -19,8 +19,6 @@ namespace Solution.Data
         //dbset<>
         public DbSet<Product> Products { get; set; }
         public DbSet<Offer> Offers { get; set; }
-        public DbSet<Pack> Packs { get; set; }
-
         public DbSet<Forum> Forums { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Prospect> Prospects { get; set; }
@@ -28,8 +26,6 @@ namespace Solution.Data
         public DbSet<Client> Clients { get; set; }
         public DbSet<Agent> Agents { get; set; }
         public DbSet<Resources> Resources { get; set; }
-
-
         public DbSet<reclamation> reclamations { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,9 +33,7 @@ namespace Solution.Data
             //modelBuilder.Configurations.Add();
             //modelBuilder.Conventions.Add();
 
-            modelBuilder.Configurations.Add(new ProductConfiguration());
-           
-
+            modelBuilder.Configurations.Add(new reclamationConfiguration());
         }
 
     }

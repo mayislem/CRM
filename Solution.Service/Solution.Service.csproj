@@ -43,12 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="IOfferService.cs" />
-    <Compile Include="IPackService.cs" />
     <Compile Include="IProductService.cs" />
     <Compile Include="IreclamationService.cs" />
-    <Compile Include="OfferService.cs" />
-    <Compile Include="PackService.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reclamationService.cs" />

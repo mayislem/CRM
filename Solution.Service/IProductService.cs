@@ -10,9 +10,7 @@ namespace Solution.Service
 {
     public interface IProductService : IService<Product>
     {
-        IEnumerable<Product> GetProductByOffer(int IdProduct);
-
-        IEnumerable<Product> GetProducts();
+       
 
     }
 }

@@ -29,13 +29,5 @@ namespace Solution.Presentation.Models
         {
             return new ApplicationDbContext();
         }
-
-        public System.Data.Entity.DbSet<Solution.Presentation.Models.OfferVm> OfferVms { get; set; }
-
-        public System.Data.Entity.DbSet<Solution.Domain.Entities.Offer> Offers { get; set; }
-
-        public System.Data.Entity.DbSet<Solution.Domain.Entities.Product> Products { get; set; }
-
-        public System.Data.Entity.DbSet<Solution.Presentation.Models.PackVM> PackVMs { get; set; }
     }
 }

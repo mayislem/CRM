@@ -1,0 +1,67 @@
+﻿@model Solution.Presentation.Models.ReclamationVm
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/thaer_layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ReclamationVm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.titre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.titre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.contenu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.contenu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.etat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.etat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Idrec }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

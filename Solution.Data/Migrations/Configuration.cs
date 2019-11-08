@@ -10,7 +10,6 @@ namespace Solution.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Solution.Data.MyContext";
         }
 
         protected override void Seed(Solution.Data.MyContext context)

@@ -10,8 +10,6 @@ namespace Solution.Presentation.Models
     public class OfferVm
     {
         public int Id { get; set; }
-        public string OfferName { get; set; }
-
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
@@ -19,14 +17,13 @@ namespace Solution.Presentation.Models
         [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
         public string ImgUrl { get; set; }
-        public float Price { get; set; }
-
         public string Description { get; set; }
 
         public int? ProductId { get; set; }
 
+        public ProductVm productvm { get; set; }
 
-        public IEnumerable<SelectListItem> Products { get; set; } //Use it to store the Category information
+        public List<SelectListItem> CourseCategoryList { get; set; } //Use it to store the Category information
 
     }
 }

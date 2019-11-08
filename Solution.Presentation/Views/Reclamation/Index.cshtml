@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/thaer_layout.cshtml";
 }
 
 <h2>Index</h2>
@@ -33,20 +34,29 @@
         <th>
             @Html.DisplayNameFor(model => model.titre)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.date)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.objet)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.contenu)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.type)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.etat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductId)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.ImageURL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contenu)
         </th>
         <th></th>
     </tr>
@@ -56,21 +66,30 @@
         <td>
             @Html.DisplayFor(modelItem => item.titre)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.date)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.objet)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.contenu)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.type)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.etat)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductId)
+        </td>
+        <td>
+            @{ string path = "~/Content/Upload/" + item.ImageURL;}
+            <img src="@Url.Content(path)" width="50" height="50" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contenu)
+        </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Idrec }) |
             @Html.ActionLink("Details", "Details", new { id=item.Idrec }) |
