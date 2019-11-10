@@ -28,13 +28,13 @@ C:\Users\Marwen\Documents\Visual Studio 2015\Projects\Solution\Solution\Solution
 C:\Users\Marwen\Documents\Visual Studio 2015\Projects\Solution\Solution\Solution\Solution.Domain\obj\Debug\Solution.Domain.dll
 C:\Users\Marwen\Documents\Visual Studio 2015\Projects\Solution\Solution\Solution\Solution.Domain\obj\Debug\Solution.Domain.pdb
 C:\Users\Marwen\Documents\Visual Studio 2015\Projects\Solution\Solution\Solution\Solution.Domain\obj\Debug\Solution.Domain.csprojResolveAssemblyReference.cache
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\Solution.Domain.dll.config
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\Solution.Domain.dll
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\Solution.Domain.pdb
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\EntityFramework.dll
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\EntityFramework.xml
-C:\Users\thaer\Desktop\Solution\Solution.Domain\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\thaer\Desktop\Solution\Solution.Domain\obj\Debug\Solution.Domain.dll
-C:\Users\thaer\Desktop\Solution\Solution.Domain\obj\Debug\Solution.Domain.pdb
-C:\Users\thaer\Desktop\Solution\Solution.Domain\obj\Debug\Solution.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\Solution.Domain.dll.config
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\Solution.Domain.dll
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\Solution.Domain.pdb
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\obj\Debug\Solution.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\obj\Debug\Solution.Domain.dll
+C:\Users\Marwen\Source\Repos\mayislem\CRM\Solution.Domain\obj\Debug\Solution.Domain.pdb
