@@ -3,6 +3,7 @@ using Solution.Presentation.Models;
 using Solution.Service;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -13,10 +14,12 @@ namespace Solution.Presentation.Controllers
     public class ReclamationController : Controller
     {
         IreclamationService service = null;
+        IProductService serviceProd = null;
 
         public ReclamationController()
         {
             service = new reclamationService();
+            serviceProd = new ProductService();
         }
         // GET: Reclamation
         public ActionResult Index(string SearchString, string date)
@@ -32,12 +35,14 @@ namespace Solution.Presentation.Controllers
                     titre = item.titre,
                     date = item.date,
                     objet = item.objet,
+                    ImageURL = item.ImageURL,
                     contenu = item.contenu,
-                    type = item.type,
-                    etat = item.etat
+                   // type = item.type,
+                    etat = item.etat,
+                    
 
 
-    });
+                });
             }
 
             return View(reclamations);
@@ -46,33 +51,71 @@ namespace Solution.Presentation.Controllers
         // GET: Reclamation/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            reclamation p = service.GetById(id);
+            ReclamationVm p1 = new ReclamationVm()
+            {
+                titre = p.titre,
+                date = p.date,              
+                objet = p.objet,
+                contenu = p.contenu,
+                etat = p.etat,
+                
+
+                
+            };
+            if (p == null)
+                return HttpNotFound();
+
+            return View(p1);
         }
 
         // GET: Reclamation/Create
         public ActionResult Create()
         {
+            //viewback faiblement Typer
+            var Products = serviceProd.GetMany();
+            ViewBag.myproduct = new SelectList(Products, "ProductId", "Title");
             return View();
         }
 
         // POST: Reclamation/Create
         [HttpPost]
-        public ActionResult Create(ReclamationVm rvm)
+        public ActionResult Create(ReclamationVm rvm, HttpPostedFileBase file)
         {
+            if (!ModelState.IsValid || file == null || file.ContentLength == 0)
+            {
+                RedirectToAction("Create");
+            }
+            var fileName = "";
+            if (file.ContentLength > 0)
+            {
+                fileName = Path.GetFileName(file.FileName);
+                var path = Path.
+                    Combine(Server.MapPath("~/Content/Upload/"),
+                    fileName);
+                file.SaveAs(path);
+            }
             reclamation reclamationdomain = new reclamation()
             {
-                Idrec = rvm.Idrec,
+               
                titre = rvm.titre,
                 date = rvm.date,
                 objet = rvm.objet,
                 contenu = rvm.contenu,
-                type = rvm.type,
-                etat = rvm.etat
-
+                type = (Domain.Entities.typevm)rvm.type,
+                ImageURL = fileName,
+                etat = rvm.etat,
+                ProductId = rvm.ProductId
 
             };
             service.Add(reclamationdomain);
             service.Commit();
+
+           
+
+
             return RedirectToAction("Index");
         }
 
@@ -150,7 +193,7 @@ namespace Solution.Presentation.Controllers
                 objet = p.objet,
                 date = p.date,
                 etat= p.etat,
-                type=p.type
+               // type=p.type
 
             };
             if (p == null)
@@ -177,7 +220,7 @@ namespace Solution.Presentation.Controllers
                         objet = p.objet,
                         date = p.date,
                         etat = p.etat,
-                        type = p.type
+                       // type = p.type
 
 
                     };

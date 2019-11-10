@@ -60,25 +60,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201911012340594_fullentities.cs" />
-    <Compile Include="Migrations\201911012340594_fullentities.Designer.cs">
-      <DependentUpon>201911012340594_fullentities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911021226323_keyfix.cs" />
-    <Compile Include="Migrations\201911021226323_keyfix.Designer.cs">
-      <DependentUpon>201911021226323_keyfix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911021247286_pack_fix.cs" />
-    <Compile Include="Migrations\201911021247286_pack_fix.Designer.cs">
-      <DependentUpon>201911021247286_pack_fix.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911022128016_fix_project.cs" />
-    <Compile Include="Migrations\201911022128016_fix_project.Designer.cs">
-      <DependentUpon>201911022128016_fix_project.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911022354462_priceoffer.cs" />
-    <Compile Include="Migrations\201911022354462_priceoffer.Designer.cs">
-      <DependentUpon>201911022354462_priceoffer.cs</DependentUpon>
+    <Compile Include="Migrations\201911021717253_test.cs" />
+    <Compile Include="Migrations\201911021717253_test.Designer.cs">
+      <DependentUpon>201911021717253_test.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyContext.cs" />
@@ -98,20 +82,8 @@
     <Folder Include="CostumConventions\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911012340594_fullentities.resx">
-      <DependentUpon>201911012340594_fullentities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911021226323_keyfix.resx">
-      <DependentUpon>201911021226323_keyfix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911021247286_pack_fix.resx">
-      <DependentUpon>201911021247286_pack_fix.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911022128016_fix_project.resx">
-      <DependentUpon>201911022128016_fix_project.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911022354462_priceoffer.resx">
-      <DependentUpon>201911022354462_priceoffer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911021717253_test.resx">
+      <DependentUpon>201911021717253_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

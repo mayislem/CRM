@@ -13,13 +13,7 @@ namespace Solution.Data.Configurations
 
         public ProductConfiguration()
         {
-           /* HasRequired(x => x.offer)
-        .WithMany(x => x.Products)
-     .HasForeignKey(x => x.ProductId);*/
-            HasRequired(Prod => Prod.offer).WithMany(o => o.Products)
-                .HasForeignKey(Prod => Prod.OfferId).WillCascadeOnDelete(false);
-
-            
+       
 
         }
 

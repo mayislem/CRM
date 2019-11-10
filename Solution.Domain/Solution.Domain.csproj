@@ -55,9 +55,7 @@
     <Compile Include="Entities\Comment.cs" />
     <Compile Include="Entities\Forum.cs" />
     <Compile Include="Entities\Offer.cs" />
-    <Compile Include="Entities\Pack.cs" />
     <Compile Include="Entities\Product.cs" />
-    <Compile Include="Entities\ProductPack.cs" />
     <Compile Include="Entities\Prospect.cs" />
     <Compile Include="Entities\reclamation.cs" />
     <Compile Include="Entities\Resources.cs" />

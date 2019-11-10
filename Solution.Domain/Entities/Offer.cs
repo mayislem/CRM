@@ -12,17 +12,11 @@ namespace Solution.Domain.Entities
     {
         [Key]
         public int OfferId { get; set; }
-        public string OfferName { get; set; }
-        public float Price { get; set; }
-
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string ImgUrl { get; set; }
-
         public string Description { get; set; }
-        public int? ProductId { get; set; }
-        [ForeignKey("ProductId")]
-        public virtual ICollection<Product> Products { get; set; }
+       
 
     }
 }

@@ -18,14 +18,8 @@ namespace Solution.Domain.Entities
         public String ImageUrl { get; set; }
         public long Quantity { get; set; }
         public string Category { get; set; }
-        
-        public int? OfferId { get; set; }
-        [ForeignKey("OfferId")]
-        public virtual Offer offer { get; set; }
 
-        public virtual ICollection<ProductPack> productpack { get; set; }
-
-
+        public virtual ICollection<reclamation> reclamations { get; set; }
 
     }
 }

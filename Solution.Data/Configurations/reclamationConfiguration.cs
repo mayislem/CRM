@@ -12,7 +12,11 @@ namespace Solution.Data.Configurations
     {
         public reclamationConfiguration()
         {
-            
+            HasOptional(r => r.Product).
+                WithMany(p => p.reclamations).
+                HasForeignKey(r => r.ProductId).
+                WillCascadeOnDelete(false);
+
         }
     }
 }

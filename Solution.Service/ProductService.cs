@@ -21,15 +21,6 @@ namespace Solution.Service
 
         }
 
-         IEnumerable<Product> IProductService.GetProducts()
-        {
-            return db.Products.ToList();
-
-        }
-
-        IEnumerable<Product> IProductService.GetProductByOffer(int IdProduct)
-        {
-            return GetMany(o => o.ProductId == IdProduct);
-        }
+       
     }
 }
