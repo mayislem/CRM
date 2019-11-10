@@ -267,6 +267,38 @@ namespace Solution.Presentation.Controllers
             }
         }
 
+        public ActionResult Expiredclient(int id)
+        {
+            if (id == null)
+
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+
+            Offer p = service.GetById(id);
+            service.Delete(p);
+            service.Commit();
+
+            return RedirectToAction("Index");
+            if (p == null)
+                return HttpNotFound();
+        }
+        public ActionResult Expired(int id)
+        {
+            if (id == null)
+
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+
+            Offer p = service.GetById(id);
+            service.Delete(p);
+            service.Commit();
+
+            return RedirectToAction("Index_shop");
+            if (p == null)
+                return HttpNotFound();
+        }
+
+
         // GET: Offer/Delete/5
         public ActionResult Delete(int id)
         {
