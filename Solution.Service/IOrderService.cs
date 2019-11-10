@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Solution.Service
 {
-    public interface IProductService : IService<Product>
+    public interface IOrderService : IService<Order>
     {
-        IEnumerable<Product> GetProductById(int IdProduct);
-
-        IEnumerable<Product> GetProducts();
+        IEnumerable<Order> GetOrderByProduct(int IdProduct);
+        List<Product> GetProdbyId();
+        Order getbyids(int productId, int userId);
     }
 }
